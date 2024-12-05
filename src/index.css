@@ -1,0 +1,336 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* General Styling */
+a {
+  font-weight: 600;
+  color: #3366ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #1a53ff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #2b2b2b;
+}
+
+h1 {
+  font-size: 3.4em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Button Styling */
+button {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 0.8em 1.5em;
+  font-size: 1.1em;
+  font-weight: 600;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+  background-color: #363636;
+  border-color: #1a53ff;
+}
+
+button:focus {
+  outline: 2px solid #1a53ff;
+}
+
+/* Dark Mode Adjustment */
+@media (prefers-color-scheme: light) {
+  :root {
+      color: #333;
+      background-color: #fff;
+  }
+  button {
+      background-color: #f0f0f0;
+      color: #333;
+  }
+  button:hover {
+      background-color: #d9d9d9;
+  }
+}
+
+/* Login Form Design */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background-color: #585858;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 2.4em;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+/* Input Group */
+.input-group, select {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label, .selectLabel {
+  display: block;
+  margin-bottom: 10px;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.input-group input, select {
+  width: calc(100% - 20px);
+  padding: 14px 12px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #666;
+  color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus, select:focus {
+  border-color: #3366ff;
+  outline: none;
+}
+
+/* Login Button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #3366ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #1a53ff;
+}
+
+/* Button Group */
+.btn-group {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10%;
+}
+
+/* Card Container */
+/* .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+} */
+
+/* .card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+} */
+
+/* Card Design */
+/* .card {
+  background-color: #2b2b2b;
+  width: 300px;
+  height: 500px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s, box-shadow 0.4s;
+  perspective: 1000px;      
+} */
+
+/* .card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+} */
+
+/* Card Flip Animation */
+/* .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+} */
+
+/* .card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+} */
+
+/* .card-front {
+  background-color: #2b2b2b;
+  color: #fff;
+} */
+
+/* .card-front {
+  background-color: #4a4a4a;
+  color: white;
+  transform: rotateY(180deg); 
+} */
+
+
+/* Card Content */
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* .card-title {
+  font-size: 1.6em;
+  color: #fff;
+  margin-bottom: 10px;
+} */
+
+/* .card-subtitle {
+  font-size: 1em;
+  color: #bbb;
+  margin-top: 5px;
+} */
+
+/* Delete Button */
+.delete-button {  
+  margin-top: 10px;
+  width: 50%;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #e60000;
+}
+
+/* Margins for reusable classes */
+.rm {
+  margin-right: 10px;
+}
+
+.rm-2 {
+  margin-right: 5px;
+}
+
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 280px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #242424;
+}
+
+.card-rating {
+  margin-bottom: 15px;
+}
+
+.card-comment {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 6px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
